@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "refri-mobile-container",
+    "name": "리프리",
     "slug": "refri-mobile-container",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -15,7 +15,8 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.refri.app"
     },
     "android": {
       "adaptiveIcon": {
@@ -25,6 +26,11 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "93fd174d-78ab-4c10-aff1-425080ba206a"
+      }
     }
   }
 }

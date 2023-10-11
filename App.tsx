@@ -1,20 +1,18 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StatusBar } from "expo-status-bar";
+import { Fragment } from "react";
+import { SafeAreaView, StyleSheet, Text, View } from "react-native";
+import WebView from "react-native-webview";
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <Fragment>
+      <SafeAreaView style={{ flex: 0, backgroundColor: "#F1F1E7" }} />
+      <SafeAreaView style={{ flex: 1, backgroundColor: "#FFFFFF" }}>
+        <WebView
+          style={{ flex: 1 }}
+          source={{ uri: "https://refri-webview.vercel.app/" }}
+        />
+      </SafeAreaView>
+    </Fragment>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
