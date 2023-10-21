@@ -1,12 +1,7 @@
 import WebView, { WebViewMessageEvent } from "react-native-webview";
 import { useState } from "react";
 import { match } from "ts-pattern";
-import { View } from "react-native";
-import {
-  Edge,
-  SafeAreaProvider,
-  SafeAreaView,
-} from "react-native-safe-area-context";
+import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 
 export default function App() {
   const [safeMode, setSafeMode] = useState<"top" | "bottom" | "all" | "none">(
@@ -49,6 +44,7 @@ export default function App() {
         .with("all", "top", () => (
           <SafeAreaView
             edges={["top"]}
+            accessibilityIgnoresInvertColors={true}
             style={{ backgroundColor: topBackground }}
           />
         ))

@@ -1,6 +1,7 @@
 {
   "expo": {
     "name": "리프리",
+    "owner": "refri",
     "slug": "refri-mobile-container",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -22,7 +23,9 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#3BE4A2"
-      }
+      },
+      "package": "com.refri.app",
+      "versionCode": 2
     },
     "web": {
       "favicon": "./assets/favicon.png"
